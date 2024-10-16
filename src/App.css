@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.menuChart{
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu{
+    background-color: #1B203A;
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+    width: 20%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.level2{
+    padding-left: 20px;
+    border-left: 1px solid #FF3F02;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.level3{
+    padding-left: 20px;
+    border-left: 1px solid #FF3F02;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover{
+    background-color: #fb410342;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover .icon{
+    transform: rotate(180deg);
+}
+
+.button {
+    color: #FB4103;
+    background-color: #fb410300;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: start;
+    border: 2px solid #fb410300;
+    transition: border 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+  
+.button.active {
+    background-color: #fb410342;
+}
+  
+.buttonArrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.buttonArrow.active {
+    background-color: #fb410342;
+}
+  
+.icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+  
+.buttonArrow.active .icon {
+    transform: rotate(180deg);
+}
+  
+@media (max-width: 1000px) {
+    h1{
+        text-align: center;
+        background-color: #1B203A;
+        color: white;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .menuChart {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu{
+        width: 100%;
+        border-radius: 0;
+    }
+    .menu2{
+        padding: 0 300px;
+    }
+    .recharts-responsive-container{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu2{
+        padding: 0 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu2{
+        padding: 0 20px;
+    }
 }
